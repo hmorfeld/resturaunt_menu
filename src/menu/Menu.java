@@ -35,4 +35,30 @@ public class Menu {
         return this.items;
     }
 
+    public ArrayList<MenuItem> removeItem(MenuItem item) {
+        int itemRemoved = -1;
+        for (int i = 0; i < items.size(); i ++) {
+            if (items.get(i).equals(item)) {
+                itemRemoved = i;
+            }
+        }
+        this.items.remove(itemRemoved);
+        return this.items;
+    }
+
+    public String menuLastUpdated() {
+        return ("The menu was last update on: " + this.lastUpdated);
+    }
+
+    public void printMenu(){
+        for (int i = 0; i < items.size(); i++) {
+            System.out.println(items.get(i).getDescription());
+
+        }
+    }
+
+    public void printItem(MenuItem item) {
+        System.out.println(item.getDescription());
+    }
+
 }

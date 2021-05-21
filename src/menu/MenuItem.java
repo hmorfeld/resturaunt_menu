@@ -1,11 +1,18 @@
 package menu;
 
-public class MenuItems {
+public class MenuItem {
 
-    private double price;
-    private String description;
-    private String category;
-    private boolean isNew;
+    public double price;
+    public String description;
+    public String category;
+    public boolean isNew;
+
+    public MenuItem(double price, String description, String category, boolean isNew) {
+        this.price = price;
+        this.description = description;
+        this.category = category;
+        this.isNew = isNew;
+    }
 
     public double getPrice() {
         return price;
@@ -39,12 +46,5 @@ public class MenuItems {
         isNew = aNew;
     }
 
-    public MenuItems(double price, String description, String category, boolean isNew) {
-        this.price = price;
-        this.description = description;
-        this.category = category;
-        this.isNew = isNew;
 
-
-    }
 }
